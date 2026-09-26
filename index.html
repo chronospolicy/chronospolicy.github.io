@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="Chronos Policy learns robot policies on physical time: timestamped observations, time-aware attention, and actions queried at their future execution times.">
+  <title>Chronos Policy: Learning Robot Policies on Physical Time</title>
+  <link rel="icon" href="assets/favicon.svg?v=transparent-20260924" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=method-narrative-20260925">
+  <script src="data.js?v=site-cleanup-20260925" defer></script>
+  <script src="app.js?v=site-cleanup-20260925" defer></script>
+  <script src="architecture.js?v=site-cleanup-20260925" defer></script>
+  <script src="rollouts.js?v=site-cleanup-20260925" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="wordmark" href="#top">Chronos Policy</a>
+      <div class="nav-links"><a href="#formulation">Method</a><a href="#real-world">Real world</a><a href="#simulation">Simulation</a><a href="#findings">Ablations</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top">
+      <h1><span>Chronos Policy:</span> Learning Robot Policies on Physical Time</h1>
+      <p class="fine-print hero-name-note" id="chronos-name" role="note">“Chronos” is the Greek word for time, reflecting that the policy reasons directly over physical time.</p>
+      <p class="hero-lede">Sensors update at different rates, data can arrive late, and computing a robot’s next move takes time. Policies trained on fixed timing can become unreliable when those rates and delays change.</p>
+      <div class="hero-actions"><a href="#real-world">Videos</a><a href="#timing">Method overview</a></div>
+      <div class="hero-reel" id="hero-reel" aria-label="Chronos Policy real-world demonstrations"></div>
+      <div class="reel-note">
+        <div class="hero-task-links" id="hero-task-links"></div>
+        <div class="hero-playback"><button class="text-button" id="hero-motion" type="button">Pause video</button><button class="text-button" id="hero-fullscreen" type="button" hidden>Full screen</button></div>
+      </div>
+    </section>
+
+    <section class="section container timing-section" id="timing" aria-labelledby="timing-title">
+        <div class="section-heading">
+          <h2 id="timing-title">Why timing matters</h2>
+          <p class="section-lede">The same displacement between two images can imply different velocities if they were captured 20 ms or 200 ms apart. Grasping a moving object also depends on when the action will execute. Fixed sequence positions leave these time intervals implicit.</p>
+        </div>
+        <div class="clock-demo">
+          <p class="fine-print timing-instruction">Adjust rates and delays to explore the timing of observations and actions. Each change draws a new example, keeping two input observations per sensor. The policy query is at 0 ms.</p>
+          <div class="clock-controls">
+            <fieldset class="clock-modality">
+              <legend>Camera</legend>
+              <p class="clock-field-title">Observation rate</p>
+              <div class="clock-rate-bounds">
+                <div><label for="camera-rate-min">Min <output id="camera-rate-min-output" for="camera-rate-min">10 Hz</output></label><input id="camera-rate-min" type="range" min="5" max="40" step="0.5" value="10" aria-label="Camera minimum observation rate"></div>
+                <div><label for="camera-rate">Max <output id="camera-rate-output" for="camera-rate">20 Hz</output></label><input id="camera-rate" type="range" min="5" max="40" step="0.5" value="20" aria-label="Camera maximum observation rate"></div>
+              </div>
+              <div class="clock-delay-control"><label for="camera-delay">Max delivery delay <output id="camera-delay-output" for="camera-delay">50 ms</output></label><input id="camera-delay" type="range" min="0" max="200" step="10" value="50" aria-label="Camera maximum sampled delivery delay"></div>
+            </fieldset>
+            <fieldset class="clock-modality">
+              <legend>Pose / gripper</legend>
+              <p class="clock-field-title">Observation rate</p>
+              <div class="clock-rate-bounds">
+                <div><label for="pose-rate-min">Min <output id="pose-rate-min-output" for="pose-rate-min">25 Hz</output></label><input id="pose-rate-min" type="range" min="5" max="100" step="0.5" value="25" aria-label="Pose / gripper minimum observation rate"></div>
+                <div><label for="pose-rate">Max <output id="pose-rate-output" for="pose-rate">50 Hz</output></label><input id="pose-rate" type="range" min="5" max="100" step="0.5" value="50" aria-label="Pose / gripper maximum observation rate"></div>
+              </div>
+              <div class="clock-delay-control"><label for="pose-delay">Max delivery delay <output id="pose-delay-output" for="pose-delay">20 ms</output></label><input id="pose-delay" type="range" min="0" max="200" step="10" value="20" aria-label="Pose / gripper maximum sampled delivery delay"></div>
+            </fieldset>
+            <fieldset class="clock-modality">
+              <legend>Force / torque</legend>
+              <p class="clock-field-title">Observation rate</p>
+              <div class="clock-rate-bounds">
+                <div><label for="force-rate-min">Min <output id="force-rate-min-output" for="force-rate-min">50 Hz</output></label><input id="force-rate-min" type="range" min="10" max="200" step="1" value="50" aria-label="Force / torque minimum observation rate"></div>
+                <div><label for="force-rate">Max <output id="force-rate-output" for="force-rate">100 Hz</output></label><input id="force-rate" type="range" min="10" max="200" step="1" value="100" aria-label="Force / torque maximum observation rate"></div>
+              </div>
+              <div class="clock-delay-control"><label for="force-delay">Max delivery delay <output id="force-delay-output" for="force-delay">10 ms</output></label><input id="force-delay" type="range" min="0" max="200" step="10" value="10" aria-label="Force / torque maximum sampled delivery delay"></div>
+            </fieldset>
+            <fieldset class="clock-modality">
+              <legend>Action queries</legend>
+              <p class="clock-field-title">Action rate</p>
+              <div class="clock-action-rate"><label for="action-rate">Fixed <output id="action-rate-output" for="action-rate">20 Hz</output></label><input id="action-rate" type="range" min="5" max="50" step="1" value="20" aria-label="Action query rate"></div>
+              <div class="clock-delay-control"><label for="action-delay">Max inference latency <output id="action-delay-output" for="action-delay">150 ms</output></label><input id="action-delay" type="range" min="0" max="250" step="50" value="150" aria-label="Maximum sampled inference latency per policy request"></div>
+            </fieldset>
+            <div class="clock-buttons"><button class="button primary" type="button" id="resample-clocks" title="Generate another random timing example with the current settings.">New timing example</button></div>
+          </div>
+          <p class="clock-range-note" id="clock-range-note" aria-live="polite"></p>
+          <div class="clock-visual">
+            <div class="clock-legend"><span class="legend-history">Observation history</span><span class="legend-observation">Inputs · 2 per sensor</span><span class="legend-action">Action queries</span></div>
+            <div class="timeline-scroll"><svg id="clock-timeline" viewBox="0 0 760 390" role="img" aria-labelledby="timeline-title timeline-description"><title id="timeline-title">Observation timing relative to the policy query</title><desc id="timeline-description">Blue arrows measure time from each sensor’s latest available capture to the policy query. The orange arrow shows the current inference latency.</desc></svg></div>
+            <p class="clock-caption">Blue arrows: latest observation → query. Orange arrow: query → first action.</p>
+            <div class="sr-only" id="clock-explanation" aria-live="polite"></div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section container" id="formulation" aria-labelledby="policy-formulation-title">
+      <div class="section-heading">
+        <h2 id="policy-formulation-title">Make time part of the policy</h2>
+        <p class="section-lede">To resolve this ambiguity, Chronos Policy takes observation capture times and requested action execution times as inputs, alongside the observations.</p>
+      </div>
+      <figure class="policy-formulation" aria-labelledby="policy-formulation-title">
+        <div class="policy-equations">
+          <div class="policy-equation policy-implicit">
+            <span class="policy-equation-label">Implicit timing</span>
+            <math display="block" aria-label="a equals f of o"><mi>a</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi>o</mi><mo>)</mo></math>
+          </div>
+          <span class="policy-equation-arrow" aria-hidden="true">→</span>
+          <div class="policy-equation policy-explicit">
+            <span class="policy-equation-label">Chronos Policy</span>
+            <math display="block" aria-label="Actions at requested execution times equal f theta of observations, observation capture times, and requested action execution times">
+              <msub><mi mathvariant="bold">A</mi><msub class="policy-action-time"><mi mathvariant="bold">t</mi><mi>a</mi></msub></msub>
+              <mo>=</mo><msub><mi>f</mi><mi>θ</mi></msub><mo>(</mo>
+              <msub><mi mathvariant="bold">O</mi><msub class="policy-capture-time"><mi mathvariant="bold">t</mi><mi>o</mi></msub></msub><mo>,</mo>
+              <msub class="policy-capture-time"><mi mathvariant="bold">t</mi><mi>o</mi></msub><mo>,</mo>
+              <msub class="policy-action-time"><mi mathvariant="bold">t</mi><mi>a</mi></msub><mo>)</mo>
+            </math>
+          </div>
+        </div>
+        <dl class="policy-key">
+          <div><dt><math aria-label="O subscript t o"><msub><mi mathvariant="bold">O</mi><msub><mi mathvariant="bold">t</mi><mi>o</mi></msub></msub></math></dt><dd>Observations</dd></div>
+          <div><dt><math class="policy-capture-time" aria-label="t o"><msub><mi mathvariant="bold">t</mi><mi>o</mi></msub></math></dt><dd>Capture times</dd></div>
+          <div><dt><math class="policy-action-time" aria-label="t a"><msub><mi mathvariant="bold">t</mi><mi>a</mi></msub></math></dt><dd>Requested execution times</dd></div>
+        </dl>
+      </figure>
+      <p class="section-lede">The timestamps specify observation spacing, measurement age, and the desired action schedule. The same observation history can then be used to query actions at different future times.</p>
+    </section>
+
+    <section class="section container method-section" id="method" aria-labelledby="method-title">
+        <div class="section-heading"><h2 id="method-title">Method</h2></div>
+        <section class="method-part" id="architecture" aria-labelledby="architecture-title">
+          <h3 id="architecture-title">Transformer architecture</h3>
+          <p class="section-lede">We implement this formulation with a diffusion transformer. A vision transformer encodes images into patch tokens; proprioception and optional force/torque measurements become sensor tokens. Conditioned on these observations, the transformer denoises an action chunk at the requested execution times.</p>
+          <p class="fine-print diagram-hint">Click a token, timestamp, or block to see what it represents.</p>
+          <div class="paper-figure diagram-explorer" id="architecture-explorer"><img src="assets/figures/architecture.svg" alt="Chronos Policy transformer architecture, with timestamped image, proprioceptive, wrench, and action tokens." width="929" height="293"></div>
+        </section>
+        <section class="method-part" id="time-aware-rope" aria-labelledby="rope-title">
+          <h3 id="rope-title">Time-aware RoPE</h3>
+          <p class="section-lede">Physical time enters the transformer through attention. Time-aware RoPE uses capture and execution timestamps as temporal coordinates, so attention reflects elapsed time between tokens while their content embeddings stay unchanged.</p>
+          <p class="fine-print diagram-hint">Click a token, clock, or equation to see how it works.</p>
+          <div class="paper-figure diagram-explorer" id="rope-explorer"><img src="assets/figures/method.svg" alt="Timestamped observations and action queries, time-aware rotary attention, and a shared physical timeline." loading="lazy" width="1188" height="372"></div>
+        </section>
+        <section class="method-part" id="temporal-randomization" aria-labelledby="randomization-title">
+          <h3 id="randomization-title">Training with temporal randomization</h3>
+          <p class="section-lede">During training, we vary each sensor’s observation rate and delivery delay, as well as when the action chunk begins. Keeping the corresponding timestamps makes these variations interpretable, helping the policy learn from different sensing and execution schedules.</p>
+        </section>
+    </section>
+
+    <section class="section container" id="real-world" aria-labelledby="real-title">
+      <div class="section-heading"><h2 id="real-title">Real-world experiments</h2></div>
+      <div class="experiment-browser">
+        <div class="task-tabs" id="real-task-tabs" role="group" aria-label="Real-world task"></div>
+        <h3 class="sr-only" id="real-task-name"></h3>
+        <p class="task-description" id="real-task-description"></p>
+        <div class="condition-tabs" id="real-condition-tabs" role="group" aria-label="Real-world timing condition"></div>
+        <p class="condition-description" id="real-condition-description"></p>
+        <div class="comparison-toolbar"><button class="button small" type="button" id="play-comparison">Play all</button></div>
+        <div class="comparison-grid" id="real-comparison"></div>
+        <p class="fine-print comparison-note">Selected trials are shown. Scores use all trials.</p>
+        <div class="real-chart-panel"><div><h3>Task score</h3><p class="fine-print">Full success + ½ partial credit.<br>Lighter bars indicate partial credit.</p></div><div id="real-chart" aria-live="polite"></div></div>
+        <details class="technical-details"><summary>Trial counts and setup</summary><div class="details-content"><div id="real-counts"></div><p>Score = 100 × (full + ½ partial) / trials. Dynamic Cup and Peg Insertion use 10 trials per cell; Pivoting uses 20. Total: 480 trials. The broken-gripper trial in Pivoting RTC Combined is counted as zero.</p><p>All methods use asynchronous execution. Controller smoothing follows the manuscript’s configurations. Clips show separate runs; internal pauses, retries, and outcomes are retained.</p></div></details>
+      </div>
+      <div class="additional-trials">
+        <h3>Additional trials</h3>
+        <div class="context-tabs" id="context-tabs" role="group" aria-label="Additional rollout category"></div><div class="context-grid" id="context-grid"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="simulation" aria-labelledby="simulation-title">
+      <div class="section-heading"><h2 id="simulation-title">Simulation</h2><p class="section-lede">Conveyor, Pivoting, and six bimanual manipulation tasks.</p></div>
+      <div id="rollout-viewer" class="rollout-viewer" hidden>
+        <h3>Matched scenes with timing changes</h3>
+        <div class="policy-controls">
+          <label for="grid-task">Task<select id="grid-task"></select></label>
+          <label for="grid-condition">Timing<select id="grid-condition"></select></label>
+          <label for="grid-policy">Compare Chronos with<select id="grid-policy"></select></label>
+        </div>
+        <div class="rollout-toolbar"><p>50 matched scenes (2x)</p><div class="rollout-legend"><span class="pending">Running</span><span class="success">Success</span><span class="failure">Failure</span></div><button class="text-button" id="grid-density" type="button">Compact grid</button><button class="text-button" id="grid-motion" type="button">Pause</button><button class="text-button" id="grid-fullscreen" type="button" aria-label="Full screen comparisons">⛶</button></div>
+        <p class="fine-print" id="grid-timing-description"></p>
+        <div class="rollout-pair" id="rollout-pair"></div>
+        <div class="rollout-scrub"><label for="grid-time" class="sr-only">Comparison playback position</label><input id="grid-time" type="range" min="0" max="1" step="0.01" value="0"><output id="grid-time-output" for="grid-time">0.0 s</output></div>
+        <p class="fine-print rollout-selection" id="grid-scene-description" aria-live="polite"></p>
+        <details class="technical-details"><summary>About these rollouts</summary><div class="details-content"><p id="grid-render-description"></p><p>Every method uses the same 50 scene seeds, in the same grid positions. Green marks a reached success condition; red marks a rollout that finishes without success. Completed clips hold their final frame.</p></div></details>
+      </div>
+      <section class="benchmark-results" id="sim-explorer" aria-labelledby="benchmark-title"><h3 id="benchmark-title">Benchmark results</h3><div class="simulation-results">
+        <div class="results-controls"><label>Task<select id="sim-task"></select></label><label>Timing<select id="sim-condition"></select></label></div>
+        <div id="simulation-chart" class="simulation-chart"></div>
+        <p class="fine-print">Mean ± sample SD across 3 training seeds. Conveyor and Pivoting: 450 episodes per method and condition; other tasks: 150.</p>
+        <details class="technical-details"><summary>All timing settings</summary><div class="table-scroll" id="simulation-table"></div></details>
+      </div></section>
+    </section>
+
+    <section class="section container findings-section" id="findings" aria-labelledby="findings-title">
+      <div class="section-heading"><h2 id="findings-title">Ablations</h2><p class="section-lede">Temporal randomization and time representations.</p></div>
+      <div class="ablation-panel" id="ablation-explorer"><div class="results-controls"><label>Task<select id="ablation-task"><option value="conveyor">Conveyor</option><option value="flipup">Pivoting</option></select></label><label>Timing<select id="ablation-condition"></select></label></div><div id="ablation-chart"></div><p class="fine-print">Mean ± sample SD across 3 training-seed means; 450 episodes per method and condition.</p></div>
+    </section>
+
+  </main>
+  <footer class="site-footer container"><span>Chronos Policy</span><a href="#top">Back to top</a></footer>
+  <noscript><p class="noscript-note">Enable JavaScript for interactive figures, rollout comparisons, and result charts.</p></noscript>
+</body>
+</html>
