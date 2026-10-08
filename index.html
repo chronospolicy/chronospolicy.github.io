@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="Chronos Policy learns robot policies on physical time: timestamped observations, time-aware attention, and actions queried at their future execution times.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chronos Policy">
+  <meta property="og:title" content="Chronos Policy: Learning Robot Policies on Physical Time">
+  <meta property="og:description" content="Timestamped observations, time-aware attention, and actions queried at their future execution times. See real-world robot demonstrations and simulation results.">
+  <meta property="og:url" content="https://chronospolicy.github.io/">
+  <meta property="og:image" content="https://chronospolicy.github.io/assets/chronos-social-preview.jpg?v=b2dffc636c5b">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Chronos Policy: Learning Robot Policies on Physical Time, over a montage of real robots, Blender, and MuJoCo tasks.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chronos Policy: Learning Robot Policies on Physical Time">
+  <meta name="twitter:description" content="Timestamped observations, time-aware attention, and actions queried at their future execution times.">
+  <meta name="twitter:image" content="https://chronospolicy.github.io/assets/chronos-social-preview.jpg?v=b2dffc636c5b">
+  <meta name="twitter:image:alt" content="Chronos Policy: Learning Robot Policies on Physical Time, over a montage of real robots, Blender, and MuJoCo tasks.">
+  <title>Chronos Policy: Learning Robot Policies on Physical Time</title>
+  <link rel="icon" href="assets/favicon.svg?v=transparent-20260924" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=1393a4b41fd0">
+  <link rel="stylesheet" href="mobile.css?v=dc447b31daf1">
+  <link rel="preload" href="assets/figures/architecture-rope.svg?v=7849bab977d5" as="image">
+  <link rel="preload" href="assets/figures/architecture-embedding.svg?v=f7035515130b" as="image">
+  <script src="data.js?v=5b36ccc71b4b" defer></script>
+  <script src="dex-data.js?v=40da537f1ebf" defer></script>
+  <script src="teaser-data.js?v=09d3e3522984" defer></script>
+  <script src="teaser-text.js?v=a8b1988d00a7" defer></script>
+  <script src="app.js?v=72c0cad478b3" defer></script>
+  <script src="diagram-data.js?v=f37d50eb28ff" defer></script>
+  <script src="architecture.js?v=7920e4c43a29" defer></script>
+  <script src="time-injection.js?v=d31dbe4cac48" defer></script>
+  <script src="temporal-randomization.js?v=4ad8e136aeba" defer></script>
+  <script src="timing-issues.js?v=11ad80ef1bf2" defer></script>
+  <script src="contents.js?v=e8054e251fe7" defer></script>
+  <script src="mobile.js?v=3a40fd9116f6" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="container" aria-label="Main navigation">
+      <a class="wordmark" href="#top"><img class="wordmark-icon" src="assets/favicon.svg?v=transparent-20260924" width="28" height="28" alt="">Chronos Policy</a>
+      <div class="nav-links"><a href="#story-teaser">Why time</a><a href="#method">Method</a><a href="#real-world">Experiments</a><a href="#findings">Ablations</a></div>
+    </nav>
+  </header>
+  <div class="page-layout">
+    <aside class="contents-sidebar">
+      <details class="page-contents" open>
+        <summary>Contents</summary>
+        <nav aria-label="Table of contents">
+          <p class="contents-title">On this page</p>
+          <a href="#top" aria-current="location">Overview</a>
+          <a href="#timing-issues">Timing challenges</a>
+          <a href="#method">How Chronos Policy works</a>
+          <div class="contents-subsections">
+            <a href="#architecture">Architecture &amp; time</a>
+            <a href="#time-aware-rope">Time-aware RoPE</a>
+            <a href="#temporal-randomization">Temporal randomization</a>
+          </div>
+          <a href="#real-world">Real-world experiments</a>
+          <a href="#simulation">Simulation</a>
+          <a href="#findings">Ablations</a>
+          <a href="#standard-tasks">DexMimicGen</a>
+        </nav>
+      </details>
+    </aside>
+    <div class="page-content">
+  <main id="main">
+    <section class="hero container" id="top">
+      <h1><span>Chronos Policy:</span> Learning Robot Policies on Physical Time</h1>
+      <p class="hero-lede">Chronos is the Greek word for time.</p>
+      <div class="hero-actions"><a href="#story-teaser">Why time matters</a><a href="#method">How Chronos Policy works</a><a href="#real-world">See the evidence</a></div>
+      <div class="teaser-player">
+      <div class="teaser-visual">
+      <video id="story-teaser" controls muted playsinline preload="none"
+        poster="assets/posters/chronos-story-teaser.jpg?v=6b101a90037f"
+        data-src="assets/videos/chronos-story-teaser.mp4?v=2bba35ac8af9"
+        data-background-src="assets/videos/chronos-story-background.mp4?v=c32263a31ee1"
+        data-background-poster="assets/posters/chronos-story-background.jpg?v=fab3d4a76aa0"
+        aria-label="Chronos Policy: Learning Robot Policies on Physical Time. A mixed grid of real and simulated tasks scrolls beneath the title. Each timing problem is introduced separately, then its image zooms into a DP and Chronos Policy comparison with the problem labelled during playback. Inference latency leads into Dynamic Cup, observation timing into Peg Insertion, and differing sensor rates into Pivoting. Each example zooms back into its diagram before the next problem. The ending combines the Chronos Policy title and animated formulation over the moving task videos: A equals f of O expands to reveal capture and requested execution times.">
+        <track kind="captions" src="assets/chronos-story-teaser.vtt?v=7adb521f5b9e" srclang="en" label="English">
+      </video>
+      <div class="teaser-text" aria-hidden="true" hidden></div>
+      <p class="hero-etymology" hidden>Chronos is the Greek word for time.</p>
+      </div>
+      </div>
+      <noscript class="teaser-no-script"><style>.teaser-player {height:0; overflow:hidden; visibility:hidden} #story-teaser {height:0}</style>
+      <video class="teaser-fallback" controls muted playsinline preload="none"
+        poster="assets/posters/chronos-story-teaser.jpg?v=6b101a90037f"
+        src="assets/videos/chronos-story-teaser.mp4?v=2bba35ac8af9"
+        aria-label="Chronos Policy: Learning Robot Policies on Physical Time. A mixed grid of real and simulated tasks scrolls beneath the title. Each timing problem is introduced separately, then its image zooms into a DP and Chronos Policy comparison with the problem labelled during playback. Inference latency leads into Dynamic Cup, observation timing into Peg Insertion, and differing sensor rates into Pivoting. Each example zooms back into its diagram before the next problem. The ending combines the Chronos Policy title and animated formulation over the moving task videos: A equals f of O expands to reveal capture and requested execution times.">
+        <track kind="captions" src="assets/chronos-story-teaser.vtt?v=7adb521f5b9e" srclang="en" label="English">
+      </video>
+      </noscript>
+    </section>
+
+    <section class="section container" id="timing-issues" aria-labelledby="timing-issues-title">
+      <h2 id="timing-issues-title">Timing challenges in robotics</h2>
+      <p class="section-lede">Choose an issue to animate it. Select it again to replay.</p>
+      <div class="issue-tabs" role="tablist" aria-label="Timing issues from the paper">
+        <button type="button" role="tab" id="issue-sampling-rate" data-issue="sampling-rate" aria-controls="timing-issue-panel" aria-selected="true">1. Sampling rate</button>
+        <button type="button" role="tab" id="issue-observation-latency" data-issue="observation-latency" aria-controls="timing-issue-panel" aria-selected="false" tabindex="-1">2. Observation latency</button>
+        <button type="button" role="tab" id="issue-dropout" data-issue="dropout" aria-controls="timing-issue-panel" aria-selected="false" tabindex="-1">3. Dropout</button>
+        <button type="button" role="tab" id="issue-inference-latency" data-issue="inference-latency" aria-controls="timing-issue-panel" aria-selected="false" tabindex="-1">4. Inference latency</button>
+        <button type="button" role="tab" id="issue-control-frequency" data-issue="control-frequency" aria-controls="timing-issue-panel" aria-selected="false" tabindex="-1">5. Control frequency</button>
+        <button type="button" role="tab" id="issue-execution-latency" data-issue="execution-latency" aria-controls="timing-issue-panel" aria-selected="false" tabindex="-1">6. Execution latency</button>
+      </div>
+      <div id="timing-issue-panel" role="tabpanel" aria-labelledby="issue-sampling-rate" tabindex="0">
+        <p id="timing-issue-copy" aria-live="polite">Changing the sampling rate changes the time between observations. Sequence positions alone no longer tell the policy how much physical time has passed.</p>
+        <div class="timing-issue-figure">
+          <svg id="timing-issue-diagram" role="img" aria-labelledby="timing-diagram-title timing-diagram-description">
+            <title id="timing-diagram-title">Variable sampling rate</title>
+            <desc id="timing-diagram-description">A schematic animation of observation spacing, using real task images.</desc>
+          </svg>
+        </div>
+      </div>
+      <div hidden>
+        <img id="timing-photo-0" src="assets/timing/cup-0.webp?v=0ecab1990c78" width="360" height="202" alt="">
+        <img id="timing-photo-1" src="assets/timing/cup-1.webp?v=ac5678addcf2" width="360" height="202" alt="">
+        <img id="timing-photo-2" src="assets/timing/cup-2.webp?v=2a3e113d5ac0" width="360" height="202" alt="">
+      </div>
+    </section>
+
+    <section class="section container" id="method">
+      <h2>How Chronos Policy adds time</h2>
+      <section class="method-part formulation-part" aria-labelledby="formulation-title">
+      <h3 id="formulation-title">Values and physical time</h3>
+      <p>Chronos Policy conditions predictions on observation capture times and requested action execution times.</p>
+      <div class="formulation">
+        <span class="equation-before" role="math" aria-label="Original formulation: A equals f of O">A = f(O)</span>
+        <span class="equation-arrow" aria-hidden="true">→</span>
+        <div class="equation" role="math" aria-label="Chronos Policy formulation: actions at requested execution times equal f theta of observations, capture times, and requested execution times">
+          <span class="action">A<sub>tₐ</sub></span><span>= f<sub>θ</sub>(</span><span class="observation">O<sub>tₒ</sub>, t<sub>o</sub>,</span><span class="action">t<sub>a</sub></span><span>)</span>
+        </div>
+      </div>
+      <p><strong>When observations are captured and when actions should execute matter as much as their values.</strong></p>
+      <p>Observation times describe spacing and measurement age. Action times specify when the output should apply.</p>
+      </section>
+      <section class="method-part" id="architecture" aria-labelledby="architecture-title">
+        <h3 id="architecture-title">Transformer architecture</h3>
+        <div id="time-injection">
+          <div class="diagram-explorer diagram-split" id="architecture-explorer" data-mode="positions">
+            <div class="diagram-copy"><div class="diagram-overview">
+              <fieldset class="architecture-options" hidden>
+                <legend>Ways to inject time</legend>
+                <label><input type="radio" name="time-injection" value="positions" checked><span>Default (no timestamps)</span></label>
+                <label><input type="radio" name="time-injection" value="rope"><span>Modify positional encoding</span></label>
+                <label><input type="radio" name="time-injection" value="embedding"><span>Add time to embeddings</span></label>
+              </fieldset>
+              <p id="architecture-mode-description" aria-live="polite">Use index-based positional encoding without observation or action timestamps.</p>
+              <noscript><p>Chronos Policy uses physical time in time-aware RoPE. Adding timestamp embeddings to token features instead retains index-based positional encoding.</p></noscript>
+            </div></div>
+            <img src="assets/figures/architecture.svg?v=5967cbfe2d05" alt="Default transformer architecture with observation values, noisy action indices, and index-based positional encoding, without physical timestamps." width="929" height="293">
+          </div>
+        </div>
+        <p class="architecture-result">Our <a href="#findings">ablations</a> favor time-aware RoPE, which we use in Chronos Policy.</p>
+      </section>
+      <section class="method-part" id="time-aware-rope" aria-labelledby="rope-title">
+        <h3 id="rope-title">Time-aware RoPE</h3>
+        <p>Each observation token uses its capture time, and each action token uses its requested execution time.</p>
+        <div class="diagram-explorer" id="rope-explorer">
+          <div class="diagram-copy"><div class="diagram-overview">
+            <p>Select a token to highlight it and its corresponding representation on physical time. Select a clock to inspect its timestamp.</p>
+          </div></div>
+          <img src="assets/figures/method.svg" alt="Time-aware RoPE from the paper: asynchronous tokens, timestamp-dependent attention rotations, and physical time." width="396" height="124">
+        </div>
+      </section>
+      <section class="method-part" id="temporal-randomization" aria-labelledby="randomization-title">
+        <h3 id="randomization-title">Temporal randomization</h3>
+        <p>During training, we vary each modality’s observation rate and delivery delay, and randomize when the predicted action chunk begins. Selected measurements keep their original capture timestamps, so the policy can interpret each history even when its timing changes.</p>
+        <p><strong>More training signal from the same demonstrations.</strong> Different resamplings can use measurements a fixed-rate grid would discard, giving the policy more views of each recorded trajectory and a wider range of timing conditions.</p>
+        <figure class="randomization-figure" id="randomization-demo" hidden>
+          <div class="randomization-toolbar">
+            <strong>One recording → many examples</strong>
+            <div class="randomization-controls" role="group" aria-label="Temporal randomization animation">
+              <span id="randomization-example">Example 1 of 3</span>
+              <button type="button" id="randomization-play" aria-controls="randomization-plot">Pause</button>
+              <button type="button" id="randomization-next" aria-controls="randomization-plot">Next</button>
+            </div>
+          </div>
+          <svg id="randomization-plot" role="img" aria-labelledby="randomization-plot-title randomization-plot-description">
+            <title id="randomization-plot-title">Resample one recorded trajectory for training</title>
+            <desc id="randomization-plot-description">Recorded capture times stay fixed. Each example selects observations at different rates and delivery delays, and requests an action chunk with a different start time.</desc>
+          </svg>
+          <div class="randomization-legend" aria-hidden="true">
+            <span><i class="randomization-key observation-key"></i>Selected observations</span>
+            <span><i class="randomization-key delay-key"></i>Observation delay</span>
+            <span><i class="randomization-key action-key"></i>Actions</span>
+          </div>
+          <span class="sr-only" id="randomization-announcement" aria-live="polite"></span>
+        </figure>
+      </section>
+    </section>
+
+    <section class="section container" id="real-world">
+      <h2>Real Robot Experiments</h2>
+      <p class="section-lede">We vary observation frequency and delivery delay, inference latency, and their combination. Across Dynamic Cup, Peg Insertion, and Pivoting, Chronos Policy achieves the highest task score in every evaluated timing condition.</p>
+      <p>DP + RTC compensates for inference latency. Chronos Policy also represents observation capture times, extending robustness to changes in sensing.</p>
+      <div class="timing-context" id="timing-relationships" role="group" aria-label="Timing relationships across tasks">
+        <p><strong>Dynamic tasks: Dynamic Cup and Conveyor.</strong> Observation intervals let the policy infer object motion. Requested execution times tell it how far ahead to act when inference is delayed.</p>
+        <p><strong>Multisensory tasks: Peg Insertion and Pivoting.</strong> Vision, proprioception, and force/torque measurements are acquired at different rates and times. Timestamps preserve their relative timing when sequence positions no longer reliably indicate when they were acquired.</p>
+      </div>
+      <figure class="paper-results">
+        <a href="assets/figures/fig_realworld.png?v=bfbeb1ef395e" target="_blank" rel="noopener" aria-label="Open the paper’s real-world results figure at full resolution">
+          <img src="assets/figures/fig_realworld.png?v=bfbeb1ef395e" width="2720" height="1371" loading="lazy" alt="Real-world evaluation from the paper: Dynamic Cup, Peg Insertion, and Pivoting, with task setups and results for Diffusion Policy, RTC, and Chronos Policy across timing conditions.">
+        </a>
+      </figure>
+      <div id="real-comparisons"></div>
+    </section>
+
+    <section class="section container simulation-section" id="simulation">
+      <h2>When time matters most</h2>
+      <p class="section-lede">Conveyor and Pivoting test these two timing relationships in simulation. The comparisons show all five policy variants under nominal and changed sensing and inference timing.</p>
+      <figure class="paper-results">
+        <a href="assets/figures/fig_simulation.png?v=603aab5afad0" target="_blank" rel="noopener" aria-label="Open the paper’s simulation results figure at full resolution">
+          <img src="assets/figures/fig_simulation.png?v=603aab5afad0" width="2720" height="1026" loading="lazy" alt="Simulation evaluation from the paper: Diffusion Policy and Chronos Policy on dynamic Conveyor, multisensory Pivoting, and six quasi-static manipulation tasks under sensing and inference timing variation.">
+        </a>
+      </figure>
+      <div id="simulation-comparisons"></div>
+    </section>
+    <section class="section container" id="findings">
+      <h2>Ablations</h2>
+      <h3>Why timestamps and temporal randomization work together</h3>
+      <p>Temporal randomization exposes a policy to different schedules, but without timestamps the policy cannot tell which schedule produced its inputs. Additive time encoding supplies timestamps through token features. Time-aware RoPE instead makes elapsed time part of attention while preserving token content.</p>
+      <p>The ablations compare both ingredients directly. Randomization alone helps Conveyor under moderate shifts but struggles under larger changes and on Pivoting. RoPE without randomization also loses robustness. Chronos Policy combines time-aware RoPE with temporal randomization.</p>
+      <figure class="paper-results" id="ablation-results">
+        <a href="assets/figures/fig_ablation.png?v=679bd79b1f7f" target="_blank" rel="noopener" aria-label="Open the paper’s ablation results figure at full resolution">
+          <img src="assets/figures/fig_ablation.png?v=679bd79b1f7f" width="2720" height="1344" loading="lazy" alt="Ablation plot from the paper: Diffusion Policy, temporal randomization, additive time encoding, RoPE without randomization, and Chronos Policy on Conveyor and Pivoting.">
+        </a>
+      </figure>
+    </section>
+    <section class="section container" id="standard-tasks">
+      <h2>Chronos Policy preserves performance when timing is less critical</h2>
+      <p class="section-lede">Across six DexMimicGen tasks, Chronos Policy achieves comparable nominal performance to Diffusion Policy and higher average success when observation timing or inference latency changes.</p>
+      <div id="standard-comparisons">
+        <article class="task dex-gallery" id="dex-gallery" data-policy="chronos">
+          <h3 class="sr-only">DexMimicGen</h3>
+          <div id="dex-timing"></div>
+          <div class="dex-overview">
+            <figure class="paper-results">
+              <figcaption><strong>Overall success rate (%)</strong></figcaption>
+              <a href="assets/figures/fig_dexmimicgen.png?v=1f9e42e25cd5" target="_blank" rel="noopener" aria-label="Open the paper’s overall DexMimicGen success-rate chart">
+                <img src="assets/figures/fig_dexmimicgen.png?v=1f9e42e25cd5" width="905" height="566" loading="lazy" alt="Paper results averaged over six DexMimicGen tasks: Chronos Policy and Diffusion Policy are comparable at nominal timing; Chronos Policy has higher average success under every tested timing variation, with the largest gains under large observation changes and combined observation and inference changes.">
+              </a>
+            </figure>
+            <div class="dex-rollouts">
+              <div id="dex-panels"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="container"><p>Chronos Policy · Learning Robot Policies on Physical Time</p><a href="#top">Back to top</a></footer>
+    </div>
+  </div>
+</body>
+</html>

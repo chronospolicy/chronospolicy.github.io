@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+Chronos Policy: Learning Robot Policies on Physical Time. Real robots, Blender, and MuJoCo.
+
+00:00:03.000 --> 00:00:06.400
+Inference latency. Computation delays the action.
+
+00:00:06.400 --> 00:00:07.700
+Zoom into Dynamic Cup.
+
+00:00:07.700 --> 00:00:15.283
+Policy sensitive to inference latency. DP and Chronos Policy, 2× playback.
+
+00:00:15.283 --> 00:00:16.533
+Zoom back to the inference latency diagram.
+
+00:00:16.533 --> 00:00:16.883
+Continue on physical time.
+
+00:00:16.883 --> 00:00:20.283
+Observation timing. Measurements may delay.
+
+00:00:20.283 --> 00:00:21.583
+Zoom into Peg Insertion.
+
+00:00:21.583 --> 00:00:26.850
+Policy sensitive to observation and inference latency. DP and Chronos Policy, 2× playback.
+
+00:00:26.850 --> 00:00:28.100
+Zoom back to the observation timing diagram.
+
+00:00:28.100 --> 00:00:28.450
+Continue on physical time.
+
+00:00:28.450 --> 00:00:31.850
+Different sensor rates. Each sensor follows its own clock.
+
+00:00:31.850 --> 00:00:33.150
+Zoom into Pivoting.
+
+00:00:33.150 --> 00:00:43.983
+Policy sensitive to sensor-rate changes. DP and Chronos Policy, 2× playback.
+
+00:00:43.983 --> 00:00:45.233
+Zoom back to the different sensor rates diagram.
+
+00:00:45.233 --> 00:00:45.583
+Continue on physical time.
+
+00:00:45.583 --> 00:00:53.583
+Chronos Policy: Learning Robot Policies on Physical Time. A equals f of O expands to include observation capture times and requested action times.
