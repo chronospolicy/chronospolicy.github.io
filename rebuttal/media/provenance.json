@@ -1,0 +1,126 @@
+{
+  "renderer": "Blender 5.3 / Cycles / CPU",
+  "purpose": "Presentation of existing simulation demonstrations; not additional learned-policy evaluation evidence.",
+  "rendering_details": "Native simulator meshes and poses, with surface-normal smoothing and presentation-only primitive edge bevels up to 2 mm. Lighting, color, background and camera differ from the policy observations. Physics and recorded trajectories are not modified.",
+  "assets": {
+    "conveyor": {
+      "kind": "recorded_demonstration_command_re_simulation",
+      "dataset": "conveyor/episode_data.zarr",
+      "episode": 0,
+      "scene_seed": 0,
+      "source_command_field": "action0_10d",
+      "command_frequency_hz": 20,
+      "max_tcp_deviation_m": 3.7172900244075713e-06,
+      "presentation_changes": [
+        "Blender Cycles lighting",
+        "camera",
+        "surface materials",
+        "studio floor; omitted room walls"
+      ],
+      "claim": "Task demonstration re-simulation only; not a learned-policy evaluation rollout.",
+      "poster": {
+        "file": "conveyor.webp",
+        "bytes": 33038,
+        "sha256": "81eb5d427683804521e780d9ded70e6c6a56f24b1c5960f2618ea47aa33c0de8",
+        "width": 1600,
+        "height": 900,
+        "source_index": 174,
+        "simulation_time_s": 1.9300000000000015
+      },
+      "animation": {
+        "file": "conveyor.mp4",
+        "bytes": 173039,
+        "sha256": "19702cb35aa80cd57e6fe79c2463bac671dbde5d9f4e9f25821a9df5d07016a3",
+        "width": 960,
+        "height": 540,
+        "source_frames": 48,
+        "delivery_fps": 24,
+        "source_sampling_fps": 10.0,
+        "source_time_span_s": 4.699999999999679,
+        "video_duration_s": 4.791667,
+        "playback_speed": 1.0,
+        "playback": "Normal physical time, forward-only sampled demonstration states. Repeated delivery frames, no generated intermediate motion; the final state is held for one source sample interval."
+      },
+      "original_simulator_recording": {
+        "file": "conveyor-original.mp4",
+        "bytes": 42235,
+        "sha256": "645eac5729697ef71f5c8ba34d3883e1145fa90b426b1821f5935c2fd61a258f",
+        "source": "simulation/assets/conveyor.mp4",
+        "kind": "pre_existing_repository_simulator_recording",
+        "presentation_changes": [
+          "Web-compatible video encoding"
+        ],
+        "claim": "Existing simulator recording supplied with the repository. No claimed link to any selected result-table cell, checkpoint, or newly reported evaluation.",
+        "poster": {
+          "file": "conveyor-original.webp",
+          "bytes": 5076,
+          "sha256": "1b4c510616e8e9a5206b8b2b6c7697d84756c1f96e29d509554345047cb4227e",
+          "width": 256,
+          "height": 192,
+          "description": "Poster extracted from the pre-existing simulator recording."
+        }
+      }
+    },
+    "pivoting": {
+      "kind": "recorded_demonstration_state_re_render",
+      "dataset": "flipup/episode_data.zarr",
+      "episode": 0,
+      "source_dataset": "flipup_floating_bookA_18n_first.zarr",
+      "source_episode": "episode_33",
+      "source_state_field": "qpos",
+      "source_state_frequency_hz": 1000,
+      "frame_count": 60,
+      "source_duration_s": 4.828000000000697,
+      "max_recorded_book_position_error_m": 0.0,
+      "presentation_changes": [
+        "Blender Cycles lighting",
+        "camera",
+        "surface materials",
+        "studio floor at bookend base; omitted background table and frame"
+      ],
+      "claim": "Task demonstration only; not a learned-policy evaluation rollout.",
+      "poster": {
+        "file": "pivoting.webp",
+        "bytes": 14596,
+        "sha256": "aab9edb97671df4db61ee064637fb1de8de51f280fda1e47ee2606fe16b2364c",
+        "width": 1600,
+        "height": 900,
+        "source_index": 3273,
+        "simulation_time_s": 5.211000000000075
+      },
+      "animation": {
+        "file": "pivoting.mp4",
+        "bytes": 104557,
+        "sha256": "c1ca161315be3aefe3f22a5321932870897297d5b7d508cfe0b17ce7fe37ca5c",
+        "width": 960,
+        "height": 540,
+        "source_frames": 60,
+        "delivery_fps": 24,
+        "source_sampling_fps": 12.220381110188791,
+        "source_time_span_s": 4.828000000000697,
+        "video_duration_s": 4.916667,
+        "playback_speed": 1.0,
+        "playback": "Normal physical time, forward-only sampled demonstration states. Repeated delivery frames, no generated intermediate motion; the final state is held for one source sample interval."
+      },
+      "original_simulator_recording": {
+        "file": "pivoting-original.mp4",
+        "bytes": 25707,
+        "sha256": "7c16fc7d1f58f04c4db24a2a640e47490c0c90fe5efc417ebc4e74c043f1f137",
+        "source": "simulation/assets/pivoting.mp4",
+        "kind": "pre_existing_repository_simulator_recording",
+        "presentation_changes": [
+          "Web-compatible video encoding"
+        ],
+        "claim": "Existing simulator recording supplied with the repository. No claimed link to any selected result-table cell, checkpoint, or newly reported evaluation.",
+        "poster": {
+          "file": "pivoting-original.webp",
+          "bytes": 4480,
+          "sha256": "b3750409c1711a8355808263382d753af299f3e12685247a93e4c89cd1eb2954",
+          "width": 256,
+          "height": 192,
+          "description": "Poster extracted from the pre-existing simulator recording."
+        }
+      }
+    }
+  }
+}

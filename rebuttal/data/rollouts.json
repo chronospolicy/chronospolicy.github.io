@@ -1,0 +1,3676 @@
+{
+  "selection": "Four selected examples per method. Chronos Policy shows three successes and one failure; other methods use the nearest-quarter outcome mix. Aggregate rates use all evaluation episodes.",
+  "tasks": {
+    "conveyor": [
+      {
+        "method": "dp",
+        "name": "DP",
+        "rate": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-dp-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-dp-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.0 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 2.99999999999967,
+                "playback_start_s": 0.0,
+                "playback_end_s": 2.99999999999967,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-dp-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not picked up before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000000896,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000000896,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000000896,
+                "simulation_end_s": 26.09999999999505,
+                "playback_start_s": 4.000000000000896,
+                "playback_end_s": 9.524999999999434,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.09999999999505,
+                "simulation_end_s": 30.049999999999876,
+                "playback_start_s": 9.524999999999434,
+                "playback_end_s": 13.475000000004261,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-dp-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.550000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.550000000006783,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.550000000006783,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "dp_lc",
+        "name": "DP + LC",
+        "rate": {
+          "mean": 0.22,
+          "sd": 0.38
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-dp_lc-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp_lc-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-dp_lc-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp_lc-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.1,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.099999999999659,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.099999999999659,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-dp_lc-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp_lc-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.1 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not picked up before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000000945,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000000945,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000000945,
+                "simulation_end_s": 26.099999999995198,
+                "playback_start_s": 4.000000000000945,
+                "playback_end_s": 9.524999999999508,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.099999999995198,
+                "simulation_end_s": 30.050000000000026,
+                "playback_start_s": 9.524999999999508,
+                "playback_end_s": 13.475000000004336,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-dp_lc-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dp_lc-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.6000000000000005,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.600000000006844,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.600000000006844,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "rtc",
+        "name": "RTC",
+        "rate": {
+          "mean": 0.22,
+          "sd": 0.38
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-rtc-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-rtc-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-rtc-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-rtc-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.2 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.2,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.199999999999648,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.199999999999648,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-rtc-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-rtc-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.1 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not picked up before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000000989,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000000989,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000000989,
+                "simulation_end_s": 26.09999999999533,
+                "playback_start_s": 4.000000000000989,
+                "playback_end_s": 9.524999999999574,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.09999999999533,
+                "simulation_end_s": 30.050000000000157,
+                "playback_start_s": 9.524999999999574,
+                "playback_end_s": 13.475000000004401,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-rtc-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-rtc-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.6000000000000005,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.600000000006844,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.600000000006844,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "discrete",
+        "name": "Discrete RTC",
+        "rate": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-discrete-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-discrete-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.7 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.7,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.699999999999794,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.699999999999794,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-discrete-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-discrete-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.3 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.3000000000000003,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.299999999999637,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.299999999999637,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-discrete-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-discrete-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.1 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not picked up before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000001078,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000001078,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000001078,
+                "simulation_end_s": 26.099999999995596,
+                "playback_start_s": 4.000000000001078,
+                "playback_end_s": 9.524999999999707,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.099999999995596,
+                "simulation_end_s": 30.050000000000423,
+                "playback_start_s": 9.524999999999707,
+                "playback_end_s": 13.475000000004535,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-discrete-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-discrete-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.8 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.75,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.750000000007027,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.750000000007027,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "dadp",
+        "name": "DA-DP",
+        "rate": {
+          "mean": 0.22,
+          "sd": 0.38
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-dadp-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dadp-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-dadp-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dadp-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.1,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.099999999999659,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.099999999999659,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-dadp-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dadp-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.1 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not placed in the bin before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000000945,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000000945,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000000945,
+                "simulation_end_s": 26.099999999995198,
+                "playback_start_s": 4.000000000000945,
+                "playback_end_s": 9.524999999999508,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.099999999995198,
+                "simulation_end_s": 30.050000000000026,
+                "playback_start_s": 9.524999999999508,
+                "playback_end_s": 13.475000000004336,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-dadp-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-dadp-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 7.8 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 7.800000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 7.800000000009533,
+                "playback_start_s": 0.0,
+                "playback_end_s": 7.800000000009533,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "future",
+        "name": "FutureRTC",
+        "rate": {
+          "mean": 5.33,
+          "sd": 2.0
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-future-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-future-seed0-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-future-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-future-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 4.4 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube fell outside the bin",
+            "clip_start_s": 0,
+            "simulated_duration_s": 4.4,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.399999999999649,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.399999999999649,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-future-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-future-seed0-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.1 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cube was not picked up before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.05,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.000000000000985,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.000000000000985,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.000000000000985,
+                "simulation_end_s": 26.099999999995315,
+                "playback_start_s": 4.000000000000985,
+                "playback_end_s": 9.524999999999569,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.099999999995315,
+                "simulation_end_s": 30.050000000000143,
+                "playback_start_s": 9.524999999999569,
+                "playback_end_s": 13.475000000004396,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-future-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-future-seed0-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.6000000000000005,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.600000000006844,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.600000000006844,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "timestamp_dp",
+        "name": "Timestamp Resampled DP",
+        "rate": {
+          "mean": 0.22,
+          "sd": 0.38
+        },
+        "condition_index": 5,
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-batch1-episode0",
+            "video": "media/rollouts/conveyor-timestamp_dp-seed0-batch1-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-timestamp_dp-seed0-batch1-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-batch2-episode0",
+            "video": "media/rollouts/conveyor-timestamp_dp-seed1-batch2-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-timestamp_dp-seed1-batch2-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600351,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 3.8 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.8000000000000003,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.799999999999783,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.799999999999783,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-batch3-episode0",
+            "video": "media/rollouts/conveyor-timestamp_dp-seed2-batch3-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-timestamp_dp-seed2-batch3-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600301,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 4.3 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 4.3,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.299999999999729,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.299999999999729,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-batch1-episode1",
+            "video": "media/rollouts/conveyor-timestamp_dp-seed0-batch1-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-timestamp_dp-seed0-batch1-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.1,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.099999999999659,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.099999999999659,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "chronos",
+        "name": "Chronos Policy",
+        "rate": {
+          "mean": 32.67,
+          "sd": 5.7
+        },
+        "condition_index": 5,
+        "selection_note": "Three selected successes and one failure. Overall success is measured over the full evaluation. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0",
+            "video": "media/rollouts/conveyor-chronos-seed0-episode0-continuous.mp4",
+            "poster": "media/rollouts/conveyor-chronos-seed0-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 600851,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube picked and placed in the bin",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.6,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.599999999999805,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.599999999999805,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2",
+            "video": "media/rollouts/conveyor-chronos-seed0-episode2-continuous.mp4",
+            "poster": "media/rollouts/conveyor-chronos-seed0-episode2-start.webp",
+            "outcome": "Success",
+            "scene_seed": 600853,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 4.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube picked and placed in the bin",
+            "clip_start_s": 0,
+            "simulated_duration_s": 4.6000000000000005,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.600000000001008,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.600000000001008,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode3",
+            "video": "media/rollouts/conveyor-chronos-seed0-episode3-continuous.mp4",
+            "poster": "media/rollouts/conveyor-chronos-seed0-episode3-start.webp",
+            "outcome": "Success",
+            "scene_seed": 600854,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 3.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube picked and placed in the bin",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.5500000000000003,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.5500000000003755,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.5500000000003755,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode1",
+            "video": "media/rollouts/conveyor-chronos-seed0-episode1-continuous.mp4",
+            "poster": "media/rollouts/conveyor-chronos-seed0-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 600852,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 2.5 s \u00b7 1\u00d7",
+            "outcome_detail": "Cube passed the pickup area",
+            "clip_start_s": 0,
+            "simulated_duration_s": 2.5,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 2.499999999999725,
+                "playback_start_s": 0.0,
+                "playback_end_s": 2.499999999999725,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      }
+    ],
+    "pivoting": [
+      {
+        "method": "dp",
+        "name": "DP",
+        "rate": {
+          "mean": 19.56,
+          "sd": 15.21
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-dp-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp-seed2-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 7.3 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 7.293,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 7.29300000000077,
+                "playback_start_s": 0.0,
+                "playback_end_s": 7.29300000000077,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-dp-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-dp-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp-seed2-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode4",
+            "video": "media/rollouts/pivoting-dp-seed2-episode4-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp-seed2-episode4-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600255
+          }
+        ]
+      },
+      {
+        "method": "dp_lc",
+        "name": "DP + LC",
+        "rate": {
+          "mean": 37.78,
+          "sd": 12.39
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-dp_lc-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp_lc-seed2-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 6.3 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.257000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.257000000000424,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.257000000000424,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-dp_lc-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp_lc-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-dp_lc-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp_lc-seed2-episode2-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 6.8 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.82,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.820000000000612,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.820000000000612,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode3",
+            "video": "media/rollouts/pivoting-dp_lc-seed2-episode3-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dp_lc-seed2-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600254
+          }
+        ]
+      },
+      {
+        "method": "rtc",
+        "name": "RTC",
+        "rate": {
+          "mean": 35.56,
+          "sd": 12.51
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-rtc-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-rtc-seed2-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-rtc-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-rtc-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-rtc-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-rtc-seed2-episode2-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 6.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.598,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.598000000000538,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.598000000000538,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode3",
+            "video": "media/rollouts/pivoting-rtc-seed2-episode3-continuous.mp4",
+            "poster": "media/rollouts/pivoting-rtc-seed2-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600254
+          }
+        ]
+      },
+      {
+        "method": "discrete",
+        "name": "Discrete RTC",
+        "rate": {
+          "mean": 25.56,
+          "sd": 10.72
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-discrete-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-discrete-seed2-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 4.0 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.992,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9919999999996714,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9919999999996714,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-discrete-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-discrete-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-discrete-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-discrete-seed2-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode3",
+            "video": "media/rollouts/pivoting-discrete-seed2-episode3-continuous.mp4",
+            "poster": "media/rollouts/pivoting-discrete-seed2-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600254
+          }
+        ]
+      },
+      {
+        "method": "dadp",
+        "name": "DA-DP",
+        "rate": {
+          "mean": 30.67,
+          "sd": 11.68
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-dadp-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dadp-seed2-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-dadp-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dadp-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-dadp-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dadp-seed2-episode2-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode3",
+            "video": "media/rollouts/pivoting-dadp-seed2-episode3-continuous.mp4",
+            "poster": "media/rollouts/pivoting-dadp-seed2-episode3-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 5.9 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.901,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.901000000000305,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.901000000000305,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600254
+          }
+        ]
+      },
+      {
+        "method": "future",
+        "name": "FutureRTC",
+        "rate": {
+          "mean": 29.78,
+          "sd": 11.97
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-future-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-future-seed2-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-future-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-future-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          },
+          {
+            "id": "seed2-episode2",
+            "video": "media/rollouts/pivoting-future-seed2-episode2-continuous.mp4",
+            "poster": "media/rollouts/pivoting-future-seed2-episode2-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 6.9 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.871,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.871000000000629,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.871000000000629,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600253
+          },
+          {
+            "id": "seed2-episode3",
+            "video": "media/rollouts/pivoting-future-seed2-episode3-continuous.mp4",
+            "poster": "media/rollouts/pivoting-future-seed2-episode3-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600254
+          }
+        ]
+      },
+      {
+        "method": "timestamp_dp",
+        "name": "Timestamp Resampled DP",
+        "rate": {
+          "mean": 18.44,
+          "sd": 9.0
+        },
+        "condition_index": 5,
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-batch1-episode0",
+            "video": "media/rollouts/pivoting-timestamp_dp-seed0-batch1-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-timestamp_dp-seed0-batch1-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 9.7 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 9.677,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 9.677000000000076,
+                "playback_start_s": 0.0,
+                "playback_end_s": 9.677000000000076,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed1-batch2-episode0",
+            "video": "media/rollouts/pivoting-timestamp_dp-seed1-batch2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-timestamp_dp-seed1-batch2-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600351
+          },
+          {
+            "id": "seed2-batch3-episode0",
+            "video": "media/rollouts/pivoting-timestamp_dp-seed2-batch3-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-timestamp_dp-seed2-batch3-episode0-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600701
+          },
+          {
+            "id": "seed0-batch1-episode1",
+            "video": "media/rollouts/pivoting-timestamp_dp-seed0-batch1-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-timestamp_dp-seed0-batch1-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          }
+        ]
+      },
+      {
+        "method": "chronos",
+        "name": "Chronos Policy",
+        "rate": {
+          "mean": 38.44,
+          "sd": 17.84
+        },
+        "condition_index": 5,
+        "selection_note": "Three selected successes and one failure. Overall success is measured over the full evaluation. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed2-episode0",
+            "video": "media/rollouts/pivoting-chronos-seed2-episode0-continuous.mp4",
+            "poster": "media/rollouts/pivoting-chronos-seed2-episode0-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 3.0 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.023,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.022999999999778,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.022999999999778,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600251
+          },
+          {
+            "id": "seed2-episode6",
+            "video": "media/rollouts/pivoting-chronos-seed2-episode6-continuous.mp4",
+            "poster": "media/rollouts/pivoting-chronos-seed2-episode6-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 3.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.124,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.123999999999767,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.123999999999767,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600257
+          },
+          {
+            "id": "seed2-episode7",
+            "video": "media/rollouts/pivoting-chronos-seed2-episode7-continuous.mp4",
+            "poster": "media/rollouts/pivoting-chronos-seed2-episode7-start.webp",
+            "outcome": "Success",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 3.3 s \u00b7 1\u00d7",
+            "outcome_detail": "Book reached upright",
+            "clip_start_s": 0,
+            "simulated_duration_s": 3.337,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.3369999999997435,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.3369999999997435,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1,
+            "episode_seed": 600258
+          },
+          {
+            "id": "seed2-episode1",
+            "video": "media/rollouts/pivoting-chronos-seed2-episode1-continuous.mp4",
+            "poster": "media/rollouts/pivoting-chronos-seed2-episode1-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 0,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 30.0 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Book did not reach upright before timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 30.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 3.9999999999996705,
+                "playback_start_s": 0.0,
+                "playback_end_s": 3.9999999999996705,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 3.9999999999996705,
+                "simulation_end_s": 26.000000000008793,
+                "playback_start_s": 3.9999999999996705,
+                "playback_end_s": 9.50000000000195,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 26.000000000008793,
+                "simulation_end_s": 30.00000000001368,
+                "playback_start_s": 9.50000000000195,
+                "playback_end_s": 13.500000000006839,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4,
+            "episode_seed": 600252
+          }
+        ]
+      }
+    ],
+    "put_cup_belt": [
+      {
+        "method": "dp",
+        "name": "DP",
+        "rate": {
+          "mean": 40.0,
+          "sd": 40.0
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup not placed in the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup still held at timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10005,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 46.9 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 46.856,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 42.9,
+                "playback_start_s": 4.0,
+                "playback_end_s": 13.725,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 42.9,
+                "simulation_end_s": 46.856,
+                "playback_start_s": 13.725,
+                "playback_end_s": 17.681000000000004,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed2-episode3-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp-seed2-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp-seed2-episode3-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10009,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 38.7 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 38.708,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 34.7,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.675,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 34.7,
+                "simulation_end_s": 38.708,
+                "playback_start_s": 11.675,
+                "playback_end_s": 15.682999999999996,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          }
+        ]
+      },
+      {
+        "method": "dp_lc",
+        "name": "DP + LC",
+        "rate": {
+          "mean": 80.0,
+          "sd": 10.0
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp_lc-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp_lc-seed0-episode0-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 47.5 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 47.512,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 43.5,
+                "playback_start_s": 4.0,
+                "playback_end_s": 13.875,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 43.5,
+                "simulation_end_s": 47.512,
+                "playback_start_s": 13.875,
+                "playback_end_s": 17.887,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp_lc-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp_lc-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10004,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 76.1 s \u00b7 8\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 76.06400000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 72.10000000000001,
+                "playback_start_s": 4.0,
+                "playback_end_s": 12.512500000000001,
+                "playback_speed": 8
+              },
+              {
+                "simulation_start_s": 72.10000000000001,
+                "simulation_end_s": 76.06400000000001,
+                "playback_start_s": 12.512500000000001,
+                "playback_end_s": 16.4765,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 8
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp_lc-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp_lc-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10005,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 31.2 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 31.16,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 27.2,
+                "playback_start_s": 4.0,
+                "playback_end_s": 9.8,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 27.2,
+                "simulation_end_s": 31.16,
+                "playback_start_s": 9.8,
+                "playback_end_s": 13.760000000000002,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed0-episode3-both-arms",
+            "video": "media/rollouts/put_cup_belt-dp_lc-seed0-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dp_lc-seed0-episode3-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10009,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup not placed in the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          }
+        ]
+      },
+      {
+        "method": "dadp",
+        "name": "DA-DP",
+        "rate": {
+          "mean": 53.33,
+          "sd": 15.28
+        },
+        "condition_index": 5,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/put_cup_belt-dadp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dadp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup not placed in the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/put_cup_belt-dadp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dadp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10004,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 38.2 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 38.244,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 34.2,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.55,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 34.2,
+                "simulation_end_s": 38.244,
+                "playback_start_s": 11.55,
+                "playback_end_s": 15.593999999999998,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/put_cup_belt-dadp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dadp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10005,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 67.5 s \u00b7 8\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 67.46000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 63.5,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.4375,
+                "playback_speed": 8
+              },
+              {
+                "simulation_start_s": 63.5,
+                "simulation_end_s": 67.46000000000001,
+                "playback_start_s": 11.4375,
+                "playback_end_s": 15.397500000000008,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 8
+          },
+          {
+            "id": "seed1-episode3-both-arms",
+            "video": "media/rollouts/put_cup_belt-dadp-seed1-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-dadp-seed1-episode3-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10009,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup not placed in the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          }
+        ]
+      },
+      {
+        "method": "timestamp_dp",
+        "name": "Timestamp Resampled DP",
+        "rate": {
+          "mean": 46.67,
+          "sd": 41.63
+        },
+        "condition_index": 5,
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/put_cup_belt-timestamp_dp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-timestamp_dp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup still held at timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/put_cup_belt-timestamp_dp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-timestamp_dp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup still held at timeout",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/put_cup_belt-timestamp_dp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-timestamp_dp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10005,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 31.6 s \u00b7 4\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 31.632,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 27.6,
+                "playback_start_s": 4.0,
+                "playback_end_s": 9.9,
+                "playback_speed": 4
+              },
+              {
+                "simulation_start_s": 27.6,
+                "simulation_end_s": 31.632,
+                "playback_start_s": 9.9,
+                "playback_end_s": 13.932,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 4
+          },
+          {
+            "id": "seed1-episode3-both-arms",
+            "video": "media/rollouts/put_cup_belt-timestamp_dp-seed1-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-timestamp_dp-seed1-episode3-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10009,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 58.3 s \u00b7 8\u00d7 middle",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 58.304,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 54.32,
+                "playback_start_s": 4.0,
+                "playback_end_s": 10.29,
+                "playback_speed": 8
+              },
+              {
+                "simulation_start_s": 54.32,
+                "simulation_end_s": 58.304,
+                "playback_start_s": 10.29,
+                "playback_end_s": 14.274000000000001,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 8
+          }
+        ]
+      },
+      {
+        "method": "chronos",
+        "name": "Chronos Policy",
+        "rate": {
+          "mean": 76.67,
+          "sd": 11.55
+        },
+        "condition_index": 5,
+        "selection_note": "Three selected successes and one failure. Overall success is measured over the full evaluation. Blender renders.",
+        "condition_label": "Videos: combined broad sensing + inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/put_cup_belt-chronos-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-chronos-seed0-episode0-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 14.4 s \u00b7 1\u00d7",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 14.444,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 14.444,
+                "playback_start_s": 0.0,
+                "playback_end_s": 14.444,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/put_cup_belt-chronos-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-chronos-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10004,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 15.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 15.108,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 15.108,
+                "playback_start_s": 0.0,
+                "playback_end_s": 15.108,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/put_cup_belt-chronos-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-chronos-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10005,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 13.6 s \u00b7 1\u00d7",
+            "outcome_detail": "Cup released into the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 13.616,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 13.616,
+                "playback_start_s": 0.0,
+                "playback_end_s": 13.616,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode4-both-arms",
+            "video": "media/rollouts/put_cup_belt-chronos-seed0-episode4-both-arms-continuous.mp4",
+            "poster": "media/rollouts/put_cup_belt-chronos-seed0-episode4-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10011,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Cup not placed in the moving gap",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 4.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 4.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 4.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 4.0,
+                "playback_end_s": 11.0,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 11.0,
+                "playback_end_s": 15.0,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          }
+        ]
+      }
+    ],
+    "stop_ball": [
+      {
+        "method": "dp",
+        "name": "DP",
+        "rate": {
+          "mean": 30.0,
+          "sd": 10.0
+        },
+        "condition_index": 4,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/stop_ball-dp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Start \u2192 failure \u00b7 6.2 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.208,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.208,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.208,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/stop_ball-dp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10003,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 9.4 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 9.388,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 9.388,
+                "playback_start_s": 0.0,
+                "playback_end_s": 9.388,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-dp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 2,
+            "clip_label": "Start \u2192 failure \u00b7 12.0 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 12.032,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 12.032,
+                "playback_start_s": 0.0,
+                "playback_end_s": 12.032,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode3-both-arms",
+            "video": "media/rollouts/stop_ball-dp-seed0-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp-seed0-episode3-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10010,
+            "training_seed": 0,
+            "clip_label": "Start \u2192 failure \u00b7 8.7 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 8.74,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 8.74,
+                "playback_start_s": 0.0,
+                "playback_end_s": 8.74,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "dp_lc",
+        "name": "DP + LC",
+        "rate": {
+          "mean": 46.67,
+          "sd": 15.28
+        },
+        "condition_index": 4,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/stop_ball-dp_lc-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp_lc-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Start \u2192 failure \u00b7 7.4 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 7.356,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 7.356,
+                "playback_start_s": 0.0,
+                "playback_end_s": 7.356,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/stop_ball-dp_lc-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp_lc-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10003,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 12.4 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 12.372,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 12.372,
+                "playback_start_s": 0.0,
+                "playback_end_s": 12.372,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-dp_lc-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp_lc-seed2-episode2-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 2,
+            "clip_label": "Start \u2192 failure \u00b7 12.0 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 12.032,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 12.032,
+                "playback_start_s": 0.0,
+                "playback_end_s": 12.032,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode4-both-arms",
+            "video": "media/rollouts/stop_ball-dp_lc-seed0-episode4-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dp_lc-seed0-episode4-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10011,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 10.0 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 10.024000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 10.024000000000001,
+                "playback_start_s": 0.0,
+                "playback_end_s": 10.024000000000001,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "dadp",
+        "name": "DA-DP",
+        "rate": {
+          "mean": 56.67,
+          "sd": 20.82
+        },
+        "condition_index": 4,
+        "selection_note": "Four selected rollouts; the success/failure mix approximates the overall rate. Blender renders.",
+        "condition_label": "Videos: inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/stop_ball-dadp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dadp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Start \u2192 failure \u00b7 7.9 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 7.908,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 7.908,
+                "playback_start_s": 0.0,
+                "playback_end_s": 7.908,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/stop_ball-dadp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dadp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10003,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 6.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 6.128,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 6.128,
+                "playback_start_s": 0.0,
+                "playback_end_s": 6.128,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-dadp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dadp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10004,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 13.1 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 13.14,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 13.14,
+                "playback_start_s": 0.0,
+                "playback_end_s": 13.14,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode3-both-arms",
+            "video": "media/rollouts/stop_ball-dadp-seed0-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-dadp-seed0-episode3-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10010,
+            "training_seed": 0,
+            "clip_label": "Start \u2192 failure \u00b7 8.2 s shown \u00b7 1\u00d7",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 8.152000000000001,
+            "full_episode_shown": false,
+            "evaluation_episode_duration_s": 120.0,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 8.152000000000001,
+                "playback_start_s": 0.0,
+                "playback_end_s": 8.152000000000001,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          }
+        ]
+      },
+      {
+        "method": "timestamp_dp",
+        "name": "Timestamp Resampled DP",
+        "rate": {
+          "mean": 30.0,
+          "sd": 10.0
+        },
+        "condition_index": 4,
+        "condition_label": "Videos: inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/stop_ball-timestamp_dp-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-timestamp_dp-seed0-episode0-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 16\u00d7 middle",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.92,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.92,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 5.92,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 5.92,
+                "playback_end_s": 12.8,
+                "playback_speed": 16
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 12.8,
+                "playback_end_s": 16.8,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 16
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/stop_ball-timestamp_dp-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-timestamp_dp-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10003,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 8.9 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 8.928,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 8.928,
+                "playback_start_s": 0.0,
+                "playback_end_s": 8.928,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-timestamp_dp-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-timestamp_dp-seed2-episode2-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 32\u00d7 middle",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 10.0,
+                "playback_start_s": 0.0,
+                "playback_end_s": 10.0,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 10.0,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 10.0,
+                "playback_end_s": 13.3125,
+                "playback_speed": 32
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 13.3125,
+                "playback_end_s": 17.3125,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 32
+          },
+          {
+            "id": "seed0-episode3-both-arms",
+            "video": "media/rollouts/stop_ball-timestamp_dp-seed0-episode3-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-timestamp_dp-seed0-episode3-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10010,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 32\u00d7 middle",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 8.96,
+                "playback_start_s": 0.0,
+                "playback_end_s": 8.96,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 8.96,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 8.96,
+                "playback_end_s": 12.305,
+                "playback_speed": 32
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 12.305,
+                "playback_end_s": 16.305,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 32
+          }
+        ]
+      },
+      {
+        "method": "chronos",
+        "name": "Chronos Policy",
+        "rate": {
+          "mean": 46.67,
+          "sd": 5.77
+        },
+        "condition_index": 4,
+        "selection_note": "Three selected successes and one failure. Overall success is measured over the full evaluation. Blender renders.",
+        "condition_label": "Videos: inference delay 0\u2013200 ms",
+        "clips": [
+          {
+            "id": "seed0-episode0-both-arms",
+            "video": "media/rollouts/stop_ball-chronos-seed0-episode0-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-chronos-seed0-episode0-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10002,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 5.9 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 5.908,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 5.908,
+                "playback_start_s": 0.0,
+                "playback_end_s": 5.908,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed1-episode1-both-arms",
+            "video": "media/rollouts/stop_ball-chronos-seed1-episode1-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-chronos-seed1-episode1-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10003,
+            "training_seed": 1,
+            "clip_label": "Full episode \u00b7 7.8 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 7.76,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 7.76,
+                "playback_start_s": 0.0,
+                "playback_end_s": 7.76,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed0-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-chronos-seed0-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-chronos-seed0-episode2-both-arms-start.webp",
+            "outcome": "Success",
+            "scene_seed": 10004,
+            "training_seed": 0,
+            "clip_label": "Full episode \u00b7 10.7 s \u00b7 1\u00d7",
+            "outcome_detail": "Ball stopped on the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 10.700000000000001,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 10.700000000000001,
+                "playback_start_s": 0.0,
+                "playback_end_s": 10.700000000000001,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 1
+          },
+          {
+            "id": "seed2-episode2-both-arms",
+            "video": "media/rollouts/stop_ball-chronos-seed2-episode2-both-arms-continuous.mp4",
+            "poster": "media/rollouts/stop_ball-chronos-seed2-episode2-both-arms-start.webp",
+            "outcome": "Failure",
+            "scene_seed": 10004,
+            "training_seed": 2,
+            "clip_label": "Full episode \u00b7 120.0 s \u00b7 32\u00d7 middle",
+            "outcome_detail": "Ball fell off the table",
+            "clip_start_s": 0,
+            "simulated_duration_s": 120.0,
+            "full_episode_shown": true,
+            "segments": [
+              {
+                "simulation_start_s": 0.0,
+                "simulation_end_s": 9.1,
+                "playback_start_s": 0.0,
+                "playback_end_s": 9.1,
+                "playback_speed": 1
+              },
+              {
+                "simulation_start_s": 9.1,
+                "simulation_end_s": 116.0,
+                "playback_start_s": 9.1,
+                "playback_end_s": 12.440625,
+                "playback_speed": 32
+              },
+              {
+                "simulation_start_s": 116.0,
+                "simulation_end_s": 120.0,
+                "playback_start_s": 12.440625,
+                "playback_end_s": 16.440625,
+                "playback_speed": 1
+              }
+            ],
+            "cut_hold_s": 0,
+            "continuous_timeline": true,
+            "max_playback_speed": 32
+          }
+        ]
+      }
+    ]
+  },
+  "task_info": {
+    "conveyor": {
+      "success": "Pick the moving cube from the belt and place it in the bin.",
+      "presentation": "Continuous playback from the start to the outcome. Longer sections are sped up, with the speed shown."
+    },
+    "pivoting": {
+      "success": "Pivot the book upright, to within 15\u00b0 of vertical.",
+      "presentation": "Continuous playback from the start to the outcome. Longer sections are sped up, with the speed shown."
+    },
+    "put_cup_belt": {
+      "success": "Release the cup into the gap between the belt\u2019s moving guides without hitting an obstacle.",
+      "presentation": "Continuous playback from the start to the outcome. Longer sections are sped up, with the speed shown."
+    },
+    "stop_ball": {
+      "success": "Intercept the moving ball and bring it to rest on the table.",
+      "presentation": "Continuous playback from the start to the outcome. Longer sections are sped up, with the speed shown."
+    }
+  }
+}

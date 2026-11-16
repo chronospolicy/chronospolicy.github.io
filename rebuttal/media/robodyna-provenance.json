@@ -1,0 +1,130 @@
+{
+  "renderer": "Blender 5.3 / Cycles / CPU",
+  "caption": "Chronos Policy rollout \u00b7 nominal timing \u00b7 Blender render",
+  "assets": {
+    "stop-ball": {
+      "task": "stop_ball",
+      "method": "Chronos Policy",
+      "condition": "nominal",
+      "training_seed": 0,
+      "scene_seed": 10003,
+      "checkpoint": "training/stop_ball/chronos/seed0/best.pt",
+      "checkpoint_sha256": "144f71d7f7c6f3062a9f66fd89273858551347121ff6ccfb051083c1dd580b6a",
+      "capture_kind": "fresh_policy_rollout_from_evaluated_checkpoint",
+      "historical_scene_success": true,
+      "historical_scene_duration_s": 2.8120000000000003,
+      "observed_success": true,
+      "observed_score": 1.0,
+      "simulated_duration_s": 2.8120000000000003,
+      "frame_count": 37,
+      "capture_sampling_hz": 12.5,
+      "capture_fidelity": "Native visual-mesh geometry and world poses sampled directly from the running SAPIEN simulator. No trajectory reconstruction or changed dynamics.",
+      "evaluator_revision": 3,
+      "physics_timestep_s": 0.004,
+      "controller_timestep_s": 0.06,
+      "source_code_sha256": {
+        "evaluate.py": "e5302cbccb7e3046f8284a04ffb652235cead1dbadfbb62133a0ad7a7702731f",
+        "control.py": "af4a7f7bbd0190eb78b461ff3c3aea3c93f0d5f00c2407192f39886525c1789b",
+        "environment.py": "cb12b52874c71fd15ea59acb780b8b8fddea4707790bcf6c61ceecb57b16a47e"
+      },
+      "source_capture_sha256": "3652269f01052b6db8f9cbb262ee9c6574ec9677690d8a1cb46f82414457ddfa",
+      "renderer": {
+        "engine": "Blender Cycles",
+        "device": "CPU",
+        "palette": "Warm white, teal, satin metal, amber task object",
+        "presentation_changes": [
+          "Studio lighting and camera",
+          "Material palette and surface-normal smoothing",
+          "Room walls, floor tiles and table legs omitted",
+          "Studio floor below tabletop",
+          "Primitive edge bevels up to 1 mm",
+          "Unused left arm omitted; active right arm and task objects are unchanged"
+        ]
+      },
+      "poster": {
+        "file": "stop-ball.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 22640,
+        "sha256": "ee9335c07110677a1768af20bb096bdc121b9afe0ebc0d510053fe91e0dc2815",
+        "source_time_s": 1.44
+      },
+      "video": {
+        "file": "stop-ball.mp4",
+        "width": 960,
+        "height": 540,
+        "bytes": 65607,
+        "sha256": "8033a3449519308833972c3f2567e70ccdf878766e52fa42777ae9879782aad1",
+        "delivery_fps": 24,
+        "playback_speed": 1.0,
+        "simulator_time_span_s": 2.8120000000000003,
+        "minimum_terminal_hold_s": 0.4,
+        "terminal_hold_s": 0.438,
+        "duration_s": 3.25,
+        "sampling": "24 fps sample-and-hold from recorded simulator timestamps; no interpolated motion."
+      }
+    },
+    "put-cup-belt": {
+      "task": "put_cup_belt",
+      "method": "Chronos Policy",
+      "condition": "nominal",
+      "training_seed": 0,
+      "scene_seed": 10002,
+      "checkpoint": "training/put_cup_belt/chronos/seed0/best.pt",
+      "checkpoint_sha256": "85776ce2a66a7f9800de11b3024be96b2a7268e2fbfa55624b4bead2a249729b",
+      "capture_kind": "fresh_policy_rollout_from_evaluated_checkpoint",
+      "historical_scene_success": true,
+      "historical_scene_duration_s": 12.976,
+      "observed_success": true,
+      "observed_score": 1.0,
+      "simulated_duration_s": 12.976,
+      "frame_count": 164,
+      "capture_sampling_hz": 12.5,
+      "capture_fidelity": "Native visual-mesh geometry and world poses sampled directly from the running SAPIEN simulator. No trajectory reconstruction or changed dynamics.",
+      "evaluator_revision": 3,
+      "physics_timestep_s": 0.004,
+      "controller_timestep_s": 0.06,
+      "source_code_sha256": {
+        "evaluate.py": "e5302cbccb7e3046f8284a04ffb652235cead1dbadfbb62133a0ad7a7702731f",
+        "control.py": "af4a7f7bbd0190eb78b461ff3c3aea3c93f0d5f00c2407192f39886525c1789b",
+        "environment.py": "cb12b52874c71fd15ea59acb780b8b8fddea4707790bcf6c61ceecb57b16a47e"
+      },
+      "source_capture_sha256": "0c4a9a449a4e81203f731c68242d3d6707a815e75748022eaae72db74e3055a0",
+      "renderer": {
+        "engine": "Blender Cycles",
+        "device": "CPU",
+        "palette": "Warm white, teal, satin metal, amber task object",
+        "presentation_changes": [
+          "Studio lighting and camera",
+          "Material palette and surface-normal smoothing",
+          "Room walls, floor tiles and table legs omitted",
+          "Studio floor below tabletop",
+          "Primitive edge bevels up to 1 mm",
+          "Unused left arm omitted; active right arm and task objects are unchanged"
+        ]
+      },
+      "poster": {
+        "file": "put-cup-belt.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 22828,
+        "sha256": "14d88d814c01e9df1f37ca3d43b043c553e34403059250e41e99bf69a183133a",
+        "source_time_s": 9.84
+      },
+      "video": {
+        "file": "put-cup-belt.mp4",
+        "width": 960,
+        "height": 540,
+        "bytes": 344892,
+        "sha256": "83ff15305a11aeaa46e6106cedab832ae4625e2c82b72a69704cab8cb9880439",
+        "delivery_fps": 24,
+        "playback_speed": 1.0,
+        "simulator_time_span_s": 12.976,
+        "minimum_terminal_hold_s": 0.4,
+        "terminal_hold_s": 0.440667,
+        "duration_s": 13.416666666666666,
+        "sampling": "24 fps sample-and-hold from recorded simulator timestamps; no interpolated motion."
+      }
+    }
+  }
+}

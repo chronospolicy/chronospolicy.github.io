@@ -1,0 +1,73 @@
+/* Additional-result elements; typography and colors use the original template. */
+.site-header .container{width:min(1000px,calc(100% - 48px))}
+.figure-note{color:var(--muted);font-size:16px;margin:14px 0}
+.result-toolbar{margin-top:22px;margin-bottom:20px}
+.result-toolbar select{max-width:100%}
+#sample-count{margin-left:auto;color:var(--muted);font-size:15px}
+.results-layout{display:flex;flex-direction:column;gap:28px;margin-top:24px}
+.task-media{order:2;width:100%}
+.results-figure{order:1;width:100%}
+.rollout-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.rollout-card{margin:0;min-width:0}
+.rollout-player{position:relative}
+.task-success{margin:0 0 16px;font-size:17px;line-height:1.45;color:var(--ink)}
+.rollout-verdict{position:absolute;bottom:8px;right:8px;padding:5px 9px;border-radius:3px;font-size:14px;font-weight:650;pointer-events:none}
+.outcome-badge.success,.rollout-verdict.success{background:#e8f2ec;color:#245a3d}
+.outcome-badge.failure,.rollout-verdict.failure{background:#f7e9e3;color:#843b27}
+.task-visual figcaption .outcome-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:3px;font-size:15px;line-height:1.3}
+.task-visual figcaption .outcome-badge span{display:inline;margin:0;color:inherit;font-size:17px}
+.task-visual figcaption .outcome-detail{color:var(--ink);font-size:15px;line-height:1.35;margin-top:7px}
+.task-visual figcaption .clip-timing{font-size:13px;line-height:1.35}
+.video-presentation{color:var(--muted);font-size:14px;line-height:1.5;margin:14px 0 0}
+.rollout-play{position:absolute;left:10px;bottom:10px;display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid #fff;border-radius:50%;background:rgba(255,255,255,.93);color:#40372f;box-shadow:0 2px 12px #0002;cursor:pointer}
+.rollout-play:hover{background:#fff;color:var(--accent)}
+.rollout-play:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.rollout-expand{position:absolute;right:7px;top:7px;display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:3px;background:#fffffff0;color:#40372f;cursor:pointer}
+.rollout-expand:hover{background:#fff;color:var(--accent)}
+.rollout-expand:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.rollout-player:fullscreen{width:100vw;height:100vh;background:#f3f2ef}
+.rollout-player:fullscreen video{width:100%;height:100%;max-height:100vh;object-fit:contain;border-radius:0}
+.rollout-player:fullscreen .rollout-expand{width:40px;height:40px;top:16px;right:16px}
+.rollout-player:fullscreen .rollout-verdict{font-size:18px;bottom:18px;right:18px}
+.video-summary{margin:0 0 16px;font-size:16px}
+.video-summary strong,.video-summary span{display:block}
+.video-summary span{color:var(--muted);font-size:15px;margin-top:4px}
+.rollout-card figcaption .success{color:#24665f}
+.rollout-card figcaption .failure{color:#87462f}
+.rollout-card figcaption strong{font-size:15px}
+.rollout-card figcaption span{font-size:14px}
+.results-figure{margin:0}
+.task-visual video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#f3f2ef;border-radius:4px}
+.task-visual figcaption{display:block;margin:12px 0 0}
+.task-visual figcaption strong,.task-visual figcaption span{display:block}
+.task-visual figcaption span{margin-top:4px;color:var(--muted);font-size:15px}
+.video-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 14px}
+.video-controls label{font-size:15px;color:var(--muted)}
+.video-controls select{font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:4px;padding:7px 10px;max-width:100%;min-width:0}
+.video-controls select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.video-note,.video-selection-note{color:var(--muted);font-size:14px;line-height:1.5;margin:12px 0 0}
+.results-figure figcaption{margin-bottom:12px}
+#result-chart svg{display:block;width:100%;height:auto;font-family:"Source Sans 3",sans-serif}
+#result-tables{margin-top:28px}
+.table-scroll{width:100%;overflow:auto;overscroll-behavior-x:contain;margin:22px 0}
+.table-scroll:focus-visible,#result-panel:focus-visible,.results-panel:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.results-table{width:100%;min-width:850px;border-collapse:collapse;font-size:15px;line-height:1.45;font-variant-numeric:tabular-nums;text-align:left}
+caption{text-align:left;font-weight:600;margin-bottom:12px}
+th,td{padding:11px 13px;vertical-align:top;border-bottom:1px solid var(--line)}
+thead{background:#faf6f1;border-top:1px solid var(--line)}
+thead th{font-weight:600;font-size:15px}
+tbody th{font-weight:600}
+.ours-row{background:#f7ede5}
+.ours-row th{color:#9b4e30}
+.results-table th:first-child{min-width:165px}
+.results-table td{white-space:nowrap}
+.results-table .sd{display:block;color:var(--muted);font-size:14px}
+.results-table .best{font-weight:700}
+.table-note{font-size:15px;color:var(--muted);margin:12px 0 18px}
+footer{font-size:15px}
+[hidden]{display:none!important}
+@media(max-width:999px){.rollout-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.results-figure{margin-top:0}}
+@media(max-width:680px){.site-header .container{width:calc(100% - 36px)}.task-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;margin-inline:0;padding:0}.task-tabs button{white-space:normal;min-width:0;padding-inline:8px}.result-toolbar{display:grid;grid-template-columns:1fr;gap:8px}.result-toolbar label{width:100%}.result-toolbar select{width:100%}#sample-count{margin:0;font-size:14px}.figure-note{font-size:15px}.table-scroll{margin-block:18px}.results-table{min-width:790px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.site-header,.task-tabs,.result-toolbar,.results-layout,#condition-description{display:none!important}.hero{padding-top:0}.section{padding-block:20px}.results-panel[hidden]{display:block!important}.results-panel{break-inside:avoid}.table-scroll{overflow:visible}.results-table{min-width:0;font-size:10px}.results-table .sd{font-size:9px}thead th{font-size:10px}th,td{padding:6px}footer{margin-top:20px}}
+@media(max-width:480px){.rollout-grid{grid-template-columns:1fr;gap:24px}}

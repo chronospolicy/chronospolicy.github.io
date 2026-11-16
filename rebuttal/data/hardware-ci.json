@@ -1,0 +1,1367 @@
+{
+  "source": "Original trial blocks underlying author-response Tables R5–R7.",
+  "method": {
+    "score": "100 × (full + 0.5 × partial) / N",
+    "interval": "Approximate 95% scenario-stratified percentile bootstrap; resample five trials within each original scenario group, preserve group weights, enumerate the score distribution exactly, and use the 2.5th and 97.5th percentiles.",
+    "scope": "Trial variability for the evaluated policies and fixed scenario mix; does not include retraining variability or paired method differences. Five trials per group can understate uncertainty.",
+    "all_success_exception": "Nominal Insertion Chronos Policy score interval omitted because empirical bootstrap is degenerate. Separate Wilson interval measures probability of full success, not the half-credit score."
+  },
+  "records": [
+    {
+      "task": "Dynamic Cup",
+      "condition": "Nominal",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 50.0,
+      "full_partial_failure": [
+        5,
+        0,
+        5
+      ],
+      "score_ci95": [
+        20.0,
+        80.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Nominal",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 60.0,
+      "full_partial_failure": [
+        6,
+        0,
+        4
+      ],
+      "score_ci95": [
+        30.0,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Nominal",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 80.0,
+      "full_partial_failure": [
+        8,
+        0,
+        2
+      ],
+      "score_ci95": [
+        50.0,
+        100.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Observation",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 35.0,
+      "full_partial_failure": [
+        3,
+        1,
+        6
+      ],
+      "score_ci95": [
+        10.0,
+        60.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.5,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Observation",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 40.0,
+      "full_partial_failure": [
+        3,
+        2,
+        5
+      ],
+      "score_ci95": [
+        15.0,
+        65.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Observation",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 65.0,
+      "full_partial_failure": [
+        6,
+        1,
+        3
+      ],
+      "score_ci95": [
+        40.0,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5,
+          0.0,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Inference",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 40.0,
+      "full_partial_failure": [
+        4,
+        0,
+        6
+      ],
+      "score_ci95": [
+        10.0,
+        70.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Inference",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 50.0,
+      "full_partial_failure": [
+        4,
+        2,
+        4
+      ],
+      "score_ci95": [
+        25.0,
+        75.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.5,
+          1.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Inference",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 65.0,
+      "full_partial_failure": [
+        6,
+        1,
+        3
+      ],
+      "score_ci95": [
+        35.0,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Combined",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 30.0,
+      "full_partial_failure": [
+        3,
+        0,
+        7
+      ],
+      "score_ci95": [
+        0.0,
+        60.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Combined",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 25.0,
+      "full_partial_failure": [
+        2,
+        1,
+        7
+      ],
+      "score_ci95": [
+        0.0,
+        50.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Dynamic Cup",
+      "condition": "Combined",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 55.0,
+      "full_partial_failure": [
+        5,
+        1,
+        4
+      ],
+      "score_ci95": [
+        25.0,
+        85.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Nominal",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 95.0,
+      "full_partial_failure": [
+        9,
+        1,
+        0
+      ],
+      "score_ci95": [
+        85.0,
+        100.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Nominal",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 85.0,
+      "full_partial_failure": [
+        8,
+        1,
+        1
+      ],
+      "score_ci95": [
+        65.0,
+        100.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Nominal",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 100.0,
+      "full_partial_failure": [
+        10,
+        0,
+        0
+      ],
+      "score_ci95": null,
+      "full_success_wilson95": [
+        72.2,
+        100.0
+      ],
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Observation",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 65.0,
+      "full_partial_failure": [
+        5,
+        3,
+        2
+      ],
+      "score_ci95": [
+        45.0,
+        85.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          0.5,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5,
+          1.0,
+          1.0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Observation",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 40.0,
+      "full_partial_failure": [
+        4,
+        0,
+        6
+      ],
+      "score_ci95": [
+        10.0,
+        70.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Observation",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 75.0,
+      "full_partial_failure": [
+        7,
+        1,
+        2
+      ],
+      "score_ci95": [
+        50.0,
+        100.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          0.0,
+          0.5,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Inference",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 45.0,
+      "full_partial_failure": [
+        4,
+        1,
+        5
+      ],
+      "score_ci95": [
+        15.0,
+        75.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Inference",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 55.0,
+      "full_partial_failure": [
+        5,
+        1,
+        4
+      ],
+      "score_ci95": [
+        25.0,
+        85.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Inference",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 75.0,
+      "full_partial_failure": [
+        7,
+        1,
+        2
+      ],
+      "score_ci95": [
+        50.0,
+        100.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Combined",
+      "method": "DP",
+      "n": 10,
+      "score_percent": 45.0,
+      "full_partial_failure": [
+        3,
+        3,
+        4
+      ],
+      "score_ci95": [
+        20.0,
+        70.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.5,
+          0.0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Combined",
+      "method": "RTC",
+      "n": 10,
+      "score_percent": 35.0,
+      "full_partial_failure": [
+        3,
+        1,
+        6
+      ],
+      "score_ci95": [
+        15.0,
+        50.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          0.0,
+          0.5,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Peg Insertion",
+      "condition": "Combined",
+      "method": "Chronos Policy",
+      "n": 10,
+      "score_percent": 65.0,
+      "full_partial_failure": [
+        6,
+        1,
+        3
+      ],
+      "score_ci95": [
+        35.0,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Nominal",
+      "method": "DP",
+      "n": 20,
+      "score_percent": 52.5,
+      "full_partial_failure": [
+        10,
+        1,
+        9
+      ],
+      "score_ci95": [
+        37.5,
+        67.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Nominal",
+      "method": "RTC",
+      "n": 20,
+      "score_percent": 57.5,
+      "full_partial_failure": [
+        11,
+        1,
+        8
+      ],
+      "score_ci95": [
+        50.0,
+        67.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Nominal",
+      "method": "Chronos Policy",
+      "n": 20,
+      "score_percent": 75.0,
+      "full_partial_failure": [
+        14,
+        2,
+        4
+      ],
+      "score_ci95": [
+        57.5,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.5,
+          0.5,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Observation",
+      "method": "DP",
+      "n": 20,
+      "score_percent": 45.0,
+      "full_partial_failure": [
+        8,
+        2,
+        10
+      ],
+      "score_ci95": [
+        32.5,
+        57.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Observation",
+      "method": "RTC",
+      "n": 20,
+      "score_percent": 52.5,
+      "full_partial_failure": [
+        10,
+        1,
+        9
+      ],
+      "score_ci95": [
+        37.5,
+        67.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Observation",
+      "method": "Chronos Policy",
+      "n": 20,
+      "score_percent": 75.0,
+      "full_partial_failure": [
+        15,
+        0,
+        5
+      ],
+      "score_ci95": [
+        60.0,
+        90.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Inference",
+      "method": "DP",
+      "n": 20,
+      "score_percent": 40.0,
+      "full_partial_failure": [
+        8,
+        0,
+        12
+      ],
+      "score_ci95": [
+        25.0,
+        55.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Inference",
+      "method": "RTC",
+      "n": 20,
+      "score_percent": 65.0,
+      "full_partial_failure": [
+        12,
+        2,
+        6
+      ],
+      "score_ci95": [
+        50.0,
+        80.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Inference",
+      "method": "Chronos Policy",
+      "n": 20,
+      "score_percent": 77.5,
+      "full_partial_failure": [
+        14,
+        3,
+        3
+      ],
+      "score_ci95": [
+        67.5,
+        87.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Combined",
+      "method": "DP",
+      "n": 20,
+      "score_percent": 52.5,
+      "full_partial_failure": [
+        10,
+        1,
+        9
+      ],
+      "score_ci95": [
+        37.5,
+        67.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Combined",
+      "method": "RTC",
+      "n": 20,
+      "score_percent": 47.5,
+      "full_partial_failure": [
+        9,
+        1,
+        10
+      ],
+      "score_ci95": [
+        30.0,
+        65.0
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          0.0,
+          0.0,
+          0.0,
+          0
+        ]
+      ]
+    },
+    {
+      "task": "Pivoting",
+      "condition": "Combined",
+      "method": "Chronos Policy",
+      "n": 20,
+      "score_percent": 75.0,
+      "full_partial_failure": [
+        14,
+        2,
+        4
+      ],
+      "score_ci95": [
+        62.5,
+        87.5
+      ],
+      "full_success_wilson95": null,
+      "scenario_trial_scores": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5,
+          0.0,
+          0.0,
+          0.5
+        ]
+      ]
+    }
+  ]
+}
